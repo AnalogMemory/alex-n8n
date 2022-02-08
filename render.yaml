@@ -1,0 +1,12 @@
+services:
+- type: web
+  name: alex-n8n
+  env: docker
+  plan: standard
+  disk:
+    name: disk-n8n
+    mountPath: ~/.n8n:/home/node/.n8n
+    sizeGB: 10
+  envVars:
+  - key: GENERIC_TIMEZONE
+    value: "America/Los_Angeles"

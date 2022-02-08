@@ -5,10 +5,16 @@ services:
   plan: standard
   disk:
     name: n8n-disk
-    mountPath: /data/n8n
+    mountPath: /data
     sizeGB: 10
   envVars:
   - key: GENERIC_TIMEZONE
     value: "America/Los_Angeles"
   - key: N8N_BASIC_AUTH_ACTIVE
     value: true
+  - key: N8N_USER_FOLDER
+    value: /data
+  - key: N8N_LOG_LEVEL
+    value: debug
+  - key: N8N_LOG_OUTPUT
+    value: console

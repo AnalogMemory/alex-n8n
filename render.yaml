@@ -4,8 +4,8 @@ services:
   env: docker
   plan: standard
   disk:
-    name: disk-n8n
-    mountPath: /home/node/.n8n
+    name: n8n-disk
+    mountPath: /data/n8n
     sizeGB: 10
   envVars:
   - key: GENERIC_TIMEZONE
